@@ -8,21 +8,26 @@ import { App } from "./App.jsx";
 import { Communication } from "./pages/Communication/Communication.jsx";
 import { BaseURL } from "./config/url.js";
 
-const router = createBrowserRouter([
+const router = createBrowserRouter(
+  [
+    {
+      element: <App />,
+      children: [
+        {
+          path: `/`,
+          element: <Introduction />,
+        },
+        {
+          path: `/communication`,
+          element: <Communication />,
+        },
+      ],
+    },
+  ],
   {
-    element: <App />,
-    children: [
-      {
-        path: `${BaseURL}/`,
-        element: <Introduction />,
-      },
-      {
-        path: `${BaseURL}/communication`,
-        element: <Communication />,
-      },
-    ],
-  },
-]);
+    basename: BaseURL,
+  }
+);
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>

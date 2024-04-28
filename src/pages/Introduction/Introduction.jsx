@@ -120,7 +120,7 @@ export const Introduction = () => {
                 }}
                 disabled={!name || !age}
                 onClick={() =>
-                  navigate(`${BaseURL}/communication`, { state: { name, age } })
+                  navigate(`/communication`, { state: { name, age } })
                 }
               >
                 <span
