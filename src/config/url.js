@@ -1,1 +1,1 @@
-export const BaseURL = import.meta.env.DEV ? "/" : "/MaisVozAQuemNaoOuve/";
+export const BaseURL = "/MaisVozAQuemNaoOuve/";
