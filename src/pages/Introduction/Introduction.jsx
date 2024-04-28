@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import logoVideo from "../../assets/logo.mp4";
+import { BaseURL } from "../../config/url";
 
 export const Introduction = () => {
   const navigate = useNavigate();
@@ -119,7 +120,7 @@ export const Introduction = () => {
                 }}
                 disabled={!name || !age}
                 onClick={() =>
-                  navigate("/communication", { state: { name, age } })
+                  navigate(`${BaseURL}/communication`, { state: { name, age } })
                 }
               >
                 <span

@@ -6,17 +6,18 @@ import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import { Introduction } from "./pages/Introduction/Introduction.jsx";
 import { App } from "./App.jsx";
 import { Communication } from "./pages/Communication/Communication.jsx";
+import { BaseURL } from "./config/url.js";
 
 const router = createBrowserRouter([
   {
     element: <App />,
     children: [
       {
-        path: "/",
+        path: `${BaseURL}/`,
         element: <Introduction />,
       },
       {
-        path: "/communication",
+        path: `${BaseURL}/communication`,
         element: <Communication />,
       },
     ],
