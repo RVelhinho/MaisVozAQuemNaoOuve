@@ -26,7 +26,9 @@ export function App() {
           position: "relative",
           zIndex: "10",
         }}
-      ></div>
+      >
+        <Outlet />
+      </div>
     </div>
   );
 }
